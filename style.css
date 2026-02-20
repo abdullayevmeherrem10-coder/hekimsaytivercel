@@ -153,20 +153,18 @@ h1, h2, h3, h4 {
 /* ─── Sound Banner ─── */
 .sound-banner {
     position: fixed;
-    bottom: 30px;
-    right: 200px;
-    left: auto;
+    bottom: 0;
+    left: 0;
     z-index: 9999;
     background: rgba(15, 23, 42, 0.95);
-    border: 1px solid rgba(204, 164, 59, 0.3);
-    border-radius: 16px;
-    padding: 20px 28px;
+    border-top: 1px solid rgba(204, 164, 59, 0.3);
+    border-radius: 0;
+    padding: 16px 28px;
     backdrop-filter: blur(20px);
-    max-width: 420px;
-    width: auto;
+    width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .sound-banner.visible {
@@ -176,10 +174,13 @@ h1, h2, h3, h4 {
 
 .sound-banner-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 16px;
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .sound-icon {
@@ -764,8 +765,8 @@ h1, h2, h3, h4 {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--amber);
-    border: 1px solid rgba(217, 119, 6, 0.3);
+    color: var(--gold);
+    border: 1px solid var(--gold);
     padding: 6px 20px;
     border-radius: 50px;
     margin-bottom: 20px;
@@ -989,6 +990,207 @@ h1, h2, h3, h4 {
     width: 22px;
     height: 22px;
     flex-shrink: 0;
+}
+
+/* ============================================================
+   CALLBACK / CONTACT FORM SECTION
+   ============================================================ */
+.section-callback {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.callback-content {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.callback-card {
+    position: relative;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(204, 164, 59, 0.15);
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.callback-card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(204, 164, 59, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.callback-icon {
+    margin-bottom: 20px;
+}
+
+.callback-icon svg {
+    width: 56px;
+    height: 56px;
+}
+
+.callback-card h3 {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+}
+
+.callback-description {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group-half {
+    flex: 1;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    background: rgba(10, 10, 26, 0.6);
+    border: 1px solid rgba(204, 164, 59, 0.15);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.phone-prefix {
+    position: absolute;
+    left: 48px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.phone-prefix + input {
+    padding-left: 100px;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--text-muted);
+}
+
+.input-wrapper input:focus {
+    border-color: var(--gold);
+    background: rgba(10, 10, 26, 0.8);
+    box-shadow: 0 0 0 3px rgba(204, 164, 59, 0.1);
+}
+
+.btn-callback {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 16px 40px;
+    font-size: 16px;
+}
+
+.btn-callback .spinner {
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.btn-callback:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.callback-message {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.callback-message svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.callback-message p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.callback-success {
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    color: #86efac;
+}
+
+.callback-error {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
 }
 
 /* ============================================================
@@ -1364,7 +1566,7 @@ footer {
 }
 
 .footer-title {
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: 28px;
     color: var(--gold);
     margin-bottom: 8px;
@@ -1464,6 +1666,10 @@ footer {
         gap: 40px;
     }
 
+    .hero-image {
+        margin-top: -80px;
+    }
+
     .hero-image img {
         width: 300px;
         height: 300px;
@@ -1545,6 +1751,7 @@ footer {
 
     .hero-image {
         order: -1;
+        margin-top: 0;
     }
 
     .hero-image img {
@@ -1621,6 +1828,16 @@ footer {
         height: 200px;
     }
 
+    /* Callback Form */
+    .callback-content {
+        max-width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     /* Booking */
     .booking-cards {
         grid-template-columns: 1fr;
@@ -1644,8 +1861,29 @@ footer {
         justify-content: center;
     }
 
+    .contact-item span {
+        font-size: 13px;
+        word-break: break-all;
+    }
+
     .social-icons {
         justify-content: center;
+    }
+
+    /* Floating buttons */
+    .floating-whatsapp {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        bottom: 24px;
+        right: 24px;
+    }
+
+    .sound-toggle {
+        bottom: 88px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
     }
 }
 
@@ -1658,6 +1896,12 @@ footer {
         padding: 0 16px;
     }
 
+    /* Brand */
+    .brand-title {
+        font-size: 1.15rem;
+    }
+
+    /* Hero */
     .hero-title {
         font-size: 22px;
     }
@@ -1668,11 +1912,21 @@ footer {
     }
 
     .hero-subtitle {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .btn-hero {
+        padding: 14px 32px;
+        font-size: 14px;
     }
 
     .hero-stats {
-        gap: 20px;
+        gap: 16px;
+    }
+
+    .hero-stat {
+        gap: 8px;
     }
 
     .hero-stat-icon {
@@ -1680,30 +1934,40 @@ footer {
     }
 
     .hero-stat-number {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .hero-stat-label {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .hero-image img {
-        width: 200px;
-        height: 200px;
+        width: 190px;
+        height: 190px;
     }
 
     .hero-image-glow {
-        width: 230px;
-        height: 230px;
+        width: 220px;
+        height: 220px;
     }
 
     .hero-image-ring {
-        width: 245px;
-        height: 245px;
+        width: 235px;
+        height: 235px;
     }
 
+    /* Sections */
     .section-title {
-        font-size: 26px;
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .section-tag {
+        font-size: 11px;
+        padding: 5px 16px;
     }
 
     .tantra-text h3,
@@ -1726,8 +1990,55 @@ footer {
         height: 120px;
     }
 
+    /* Callback */
+    .callback-card {
+        padding: 28px 16px;
+        border-radius: 18px;
+    }
+
+    .callback-card h3 {
+        font-size: 20px;
+    }
+
+    .callback-description {
+        font-size: 13px;
+    }
+
+    .phone-prefix {
+        font-size: 14px;
+    }
+
+    .phone-prefix + input {
+        padding-left: 90px;
+    }
+
+    .input-wrapper input {
+        font-size: 14px;
+        padding: 12px 14px 12px 44px;
+    }
+
+    .input-icon {
+        width: 18px;
+        height: 18px;
+        left: 14px;
+    }
+
+    .phone-prefix {
+        left: 44px;
+    }
+
+    .btn-callback {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    /* Booking */
     .booking-card {
-        padding: 36px 24px;
+        padding: 32px 20px;
+    }
+
+    .booking-card h3 {
+        font-size: 20px;
     }
 
     /* Videos */
@@ -1739,9 +2050,79 @@ footer {
         font-size: 16px;
     }
 
+    /* Footer */
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-col h4 {
+        font-size: 16px;
+    }
+
+    .floating-whatsapp {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 16px;
+    }
+
+    .sound-toggle {
+        bottom: 80px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .sound-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .sound-banner {
-        bottom: 16px;
-        padding: 16px 20px;
+        bottom: 0;
+        padding: 14px 16px;
+    }
+
+    .sound-banner-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sound-banner p {
+        font-size: 12px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-stat {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .callback-card {
+        padding: 24px 14px;
+    }
+
+    .btn-gold-outline,
+    .btn-mint-outline {
+        padding: 12px 24px;
+        font-size: 13px;
     }
 }
 

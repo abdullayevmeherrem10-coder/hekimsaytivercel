@@ -191,6 +191,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ─── Callback Form Submission to Google Sheets ───
+    const callbackForm = document.getElementById('callback-form');
+    if (callbackForm) {
+        callbackForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const firstnameInput = document.getElementById('client-firstname');
+            const lastnameInput = document.getElementById('client-lastname');
+            const phoneInput = document.getElementById('client-phone');
+            const submitBtn = document.getElementById('callback-submit');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            const successMsg = document.getElementById('callback-success');
+            const errorMsg = document.getElementById('callback-error');
+
+            // Hide previous messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+            submitBtn.disabled = true;
+
+            // GOOGLE SHEETS WEB APP URL - bu URL-i öz Google Apps Script deployment URL-iniz ilə əvəz edin
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHct03_Veefazh2x46WrdyRmB8E6IV2JhjDeV2zCXvzyCcZJZGzXQzT4f9mRnsSOSJ3A/exec';
+
+            try {
+                const params = new URLSearchParams({
+                    ad: firstnameInput.value.trim(),
+                    soyad: lastnameInput.value.trim(),
+                    telefon: '+994' + phoneInput.value.trim().replace(/\D/g, ''),
+                    tarix: new Date().toLocaleString('az-AZ')
+                });
+                const response = await fetch(GOOGLE_SCRIPT_URL + '?' + params.toString(), {
+                    method: 'GET',
+                    mode: 'no-cors'
+                });
+
+                // no-cors mode always returns opaque response, so we assume success
+                callbackForm.style.display = 'none';
+                successMsg.style.display = 'flex';
+                firstnameInput.value = '';
+                lastnameInput.value = '';
+                phoneInput.value = '';
+            } catch (err) {
+                errorMsg.style.display = 'flex';
+            } finally {
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
     // ─── Aurora Background Color Shift on Scroll ───
     const auroraBg = document.getElementById('aurora-bg');
 
