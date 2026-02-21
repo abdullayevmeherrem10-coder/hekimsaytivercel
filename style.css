@@ -1915,7 +1915,7 @@ footer {
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 30px;
+        margin-top: 40px;
         font-size: 1rem;
         letter-spacing: 3px;
     }
@@ -1925,12 +1925,14 @@ footer {
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 20px;
+        margin-top: 25px;
         font-size: 1.8rem;
     }
 
     .hero-title {
-        display: none;
+        display: block;
+        margin-top: 25px;
+        font-size: 24px;
     }
 
     .hero-scroll-indicator {
@@ -2133,14 +2135,19 @@ footer {
     }
 
     .hero-image-title {
-        margin-top: 25px;
+        margin-top: 35px;
         font-size: 0.9rem;
         letter-spacing: 2.5px;
     }
 
     .hero-image-name {
-        margin-top: 18px;
+        margin-top: 20px;
         font-size: 1.5rem;
+    }
+
+    .hero-title {
+        margin-top: 20px;
+        font-size: 20px;
     }
 
     /* Sections */
@@ -2305,14 +2312,19 @@ footer {
     }
 
     .hero-image-title {
-        margin-top: 22px;
-        font-size: 0.8rem;
+        margin-top: 30px;
+        font-size: 0.75rem;
         letter-spacing: 2px;
     }
 
     .hero-image-name {
         margin-top: 16px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .hero-title {
+        margin-top: 16px;
+        font-size: 18px;
     }
 
     .callback-card {
