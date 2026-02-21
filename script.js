@@ -150,6 +150,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ─── Close Floating Buttons ───
+    const closeSoundBtn = document.getElementById('close-sound-toggle');
+    const closeWhatsappBtn = document.getElementById('close-whatsapp');
+    const soundToggleWrap = document.getElementById('sound-toggle-wrap');
+    const whatsappWrap = document.getElementById('whatsapp-wrap');
+
+    if (closeSoundBtn && soundToggleWrap) {
+        closeSoundBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (soundEnabled && !soundMuted) {
+                ambientAudio.pause();
+            }
+            soundToggleWrap.style.display = 'none';
+        });
+    }
+
+    if (closeWhatsappBtn && whatsappWrap) {
+        closeWhatsappBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            whatsappWrap.style.display = 'none';
+        });
+    }
+
     // ─── Callback Form Submission to Google Sheets ───
     const callbackForm = document.getElementById('callback-form');
     if (callbackForm) {

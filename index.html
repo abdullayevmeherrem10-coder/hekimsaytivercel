@@ -627,23 +627,29 @@
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <button class="sound-toggle" id="sound-toggle" aria-label="Səsi dayandır">
-            <svg class="sound-toggle-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M9 18V5l12-2v13" />
-                <circle cx="6" cy="18" r="3" />
-                <circle cx="18" cy="16" r="3" />
-            </svg>
-            <svg class="sound-toggle-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M9 18V5l12-2v13" />
-                <circle cx="6" cy="18" r="3" />
-                <circle cx="18" cy="16" r="3" />
-                <line x1="1" y1="1" x2="23" y2="23" stroke-width="2" />
-            </svg>
-        </button>
-        <a href="https://wa.me/994518499998?text=Salam,%20saytınızdan%20sizinlə%20əlaqə%20saxlayıram."
-           class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp ilə əlaqə">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
+        <div class="floating-btn-wrap" id="sound-toggle-wrap">
+            <span class="floating-close" id="close-sound-toggle">&times;</span>
+            <button class="sound-toggle" id="sound-toggle" aria-label="Səsi dayandır">
+                <svg class="sound-toggle-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 18V5l12-2v13" />
+                    <circle cx="6" cy="18" r="3" />
+                    <circle cx="18" cy="16" r="3" />
+                </svg>
+                <svg class="sound-toggle-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 18V5l12-2v13" />
+                    <circle cx="6" cy="18" r="3" />
+                    <circle cx="18" cy="16" r="3" />
+                    <line x1="1" y1="1" x2="23" y2="23" stroke-width="2" />
+                </svg>
+            </button>
+        </div>
+        <div class="floating-btn-wrap" id="whatsapp-wrap">
+            <span class="floating-close" id="close-whatsapp">&times;</span>
+            <a href="https://wa.me/994518499998?text=Salam,%20saytınızdan%20sizinlə%20əlaqə%20saxlayıram."
+               class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp ilə əlaqə">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
     </div>
 
     <!-- Scripts -->

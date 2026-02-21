@@ -214,6 +214,44 @@ h1, h2, h3, h4 {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+}
+
+.floating-btn-wrap {
+    position: relative;
+}
+
+.floating-close {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    background: rgba(30, 30, 50, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.floating-btn-wrap:hover .floating-close {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    .floating-close {
+        opacity: 1;
+    }
+}
+
+.floating-close:hover {
+    background: rgba(220, 50, 50, 0.9);
+    border-color: rgba(220, 50, 50, 0.9);
     transition: bottom 0.5s ease;
 }
 
