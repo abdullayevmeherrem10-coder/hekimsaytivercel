@@ -706,6 +706,13 @@ h1, h2, h3, h4 {
     margin-top: -140px;
 }
 
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-image img {
     width: 380px;
     height: 380px;
@@ -1879,6 +1886,13 @@ footer {
         margin-top: 0;
         flex-direction: column;
         margin-bottom: 40px;
+    }
+
+    .hero-image-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-image img {
