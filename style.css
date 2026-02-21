@@ -701,6 +701,7 @@ h1, h2, h3, h4 {
 .hero-image {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -140px;
@@ -779,12 +780,10 @@ h1, h2, h3, h4 {
 }
 
 .hero-image-title {
-    position: absolute;
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     z-index: 5;
-    font-family: var(--font-body);
+    margin-top: 30px;
+    font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.65);
@@ -795,11 +794,9 @@ h1, h2, h3, h4 {
 }
 
 .hero-image-name {
-    position: absolute;
-    bottom: -140px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     z-index: 5;
+    margin-top: 20px;
     font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 600;
@@ -1800,13 +1797,13 @@ footer {
     }
 
     .hero-image-title {
-        bottom: -60px;
+        margin-top: 25px;
         font-size: 0.95rem;
         letter-spacing: 3px;
     }
 
     .hero-image-name {
-        bottom: -110px;
+        margin-top: 18px;
         font-size: 1.7rem;
     }
 
@@ -1895,18 +1892,14 @@ footer {
     }
 
     .hero-image-title {
-        bottom: -50px;
+        margin-top: 22px;
         font-size: 0.85rem;
         letter-spacing: 2.5px;
     }
 
     .hero-image-name {
-        bottom: -90px;
+        margin-top: 16px;
         font-size: 1.5rem;
-    }
-
-    .hero-section {
-        padding-bottom: 120px;
     }
 
     .hero-scroll-indicator {
@@ -2109,18 +2102,14 @@ footer {
     }
 
     .hero-image-title {
-        bottom: -42px;
-        font-size: 0.75rem;
+        margin-top: 18px;
+        font-size: 0.8rem;
         letter-spacing: 2px;
     }
 
     .hero-image-name {
-        bottom: -76px;
+        margin-top: 14px;
         font-size: 1.25rem;
-    }
-
-    .hero-section {
-        padding-bottom: 100px;
     }
 
     /* Sections */
@@ -2285,14 +2274,14 @@ footer {
     }
 
     .hero-image-title {
-        bottom: -38px;
-        font-size: 0.65rem;
+        margin-top: 15px;
+        font-size: 0.7rem;
         letter-spacing: 1.5px;
     }
 
     .hero-image-name {
-        bottom: -66px;
-        font-size: 1.1rem;
+        margin-top: 12px;
+        font-size: 1.05rem;
     }
 
     .callback-card {
