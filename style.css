@@ -1878,7 +1878,22 @@ footer {
         order: -1;
         margin-top: 0;
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-image-glow {
+        width: 310px;
+        height: 310px;
+    }
+
+    .hero-image-ring {
+        width: 300px;
+        height: 300px;
     }
 
     .hero-image-title {
@@ -1886,9 +1901,9 @@ footer {
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 22px;
-        font-size: 0.85rem;
-        letter-spacing: 2.5px;
+        margin-top: 30px;
+        font-size: 1rem;
+        letter-spacing: 3px;
     }
 
     .hero-image-name {
@@ -1896,23 +1911,12 @@ footer {
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 16px;
-        font-size: 1.5rem;
+        margin-top: 20px;
+        font-size: 1.8rem;
     }
 
-    .hero-image img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .hero-image-glow {
-        width: 280px;
-        height: 280px;
-    }
-
-    .hero-image-ring {
-        width: 300px;
-        height: 300px;
+    .hero-title {
+        display: none;
     }
 
     .hero-scroll-indicator {
@@ -2091,13 +2095,13 @@ footer {
     }
 
     .hero-image img {
-        width: 190px;
-        height: 190px;
+        width: 220px;
+        height: 220px;
     }
 
     .hero-image-glow {
-        width: 220px;
-        height: 220px;
+        width: 245px;
+        height: 245px;
     }
 
     .hero-image-ring {
@@ -2115,14 +2119,14 @@ footer {
     }
 
     .hero-image-title {
-        margin-top: 18px;
-        font-size: 0.8rem;
-        letter-spacing: 2px;
+        margin-top: 25px;
+        font-size: 0.9rem;
+        letter-spacing: 2.5px;
     }
 
     .hero-image-name {
-        margin-top: 14px;
-        font-size: 1.25rem;
+        margin-top: 18px;
+        font-size: 1.5rem;
     }
 
     /* Sections */
@@ -2287,14 +2291,14 @@ footer {
     }
 
     .hero-image-title {
-        margin-top: 15px;
-        font-size: 0.7rem;
-        letter-spacing: 1.5px;
+        margin-top: 22px;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
     }
 
     .hero-image-name {
-        margin-top: 12px;
-        font-size: 1.05rem;
+        margin-top: 16px;
+        font-size: 1.3rem;
     }
 
     .callback-card {
