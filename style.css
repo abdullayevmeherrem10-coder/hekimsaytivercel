@@ -1885,7 +1885,7 @@ footer {
         order: -1;
         margin-top: 0;
         flex-direction: column;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 
     .hero-image-wrapper {
@@ -1935,7 +1935,7 @@ footer {
 
     .hero-title {
         display: block;
-        margin-top: 6px;
+        margin-top: 2px;
         font-size: 1.8rem;
     }
 
@@ -2154,7 +2154,7 @@ footer {
     }
 
     .hero-title {
-        margin-top: 5px;
+        margin-top: 2px;
         font-size: 1.4rem;
     }
 
@@ -2331,7 +2331,7 @@ footer {
     }
 
     .hero-title {
-        margin-top: 4px;
+        margin-top: 2px;
         font-size: 1.1rem;
     }
 
