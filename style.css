@@ -60,7 +60,7 @@ body {
     overflow-x: hidden;
     position: relative;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .container {
@@ -374,7 +374,7 @@ h1, h2, h3, h4 {
 
 .navbar-links li a {
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-secondary) !important;
     text-decoration: none !important;
@@ -490,7 +490,7 @@ h1, h2, h3, h4 {
 
 .hero-eyebrow {
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -509,7 +509,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-subtitle {
-    font-size: 18px;
+    font-size: 19px;
     color: var(--text-secondary);
     font-weight: 500;
     margin-bottom: 40px;
@@ -528,7 +528,7 @@ h1, h2, h3, h4 {
     background: transparent;
     border-radius: 50px;
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
@@ -577,7 +577,7 @@ h1, h2, h3, h4 {
     background: linear-gradient(135deg, #D4AF37, #cca43b, #e6c44d);
     border-radius: 50px;
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     letter-spacing: 1px;
     text-decoration: none;
@@ -654,7 +654,7 @@ h1, h2, h3, h4 {
     background: transparent;
     border-radius: 50px;
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
@@ -811,7 +811,7 @@ h1, h2, h3, h4 {
 .section-tag {
     display: inline-block;
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -840,7 +840,7 @@ h1, h2, h3, h4 {
 }
 
 .section-subtitle {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--text-secondary);
     max-width: 600px;
@@ -1028,7 +1028,7 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 14px;
     padding: 12px 0;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--text-primary);
     border-bottom: 1px solid rgba(204, 164, 59, 0.08);
@@ -1090,14 +1090,14 @@ h1, h2, h3, h4 {
 
 .callback-card h3 {
     font-family: var(--font-heading);
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--gold-light);
     margin-bottom: 12px;
 }
 
 .callback-description {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--text-secondary);
     line-height: 1.8;
@@ -1126,7 +1126,7 @@ h1, h2, h3, h4 {
 .form-group label {
     display: block;
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--gold);
     letter-spacing: 1px;
@@ -1157,7 +1157,7 @@ h1, h2, h3, h4 {
     border-radius: 12px;
     color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
 }
@@ -1167,7 +1167,7 @@ h1, h2, h3, h4 {
     left: 48px;
     color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     pointer-events: none;
     z-index: 1;
     white-space: nowrap;
@@ -1485,13 +1485,13 @@ h1, h2, h3, h4 {
 }
 
 .booking-card h3 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 16px;
     color: var(--text-primary);
 }
 
 .booking-card > p {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--text-secondary);
     margin-bottom: 24px;
@@ -1505,7 +1505,7 @@ h1, h2, h3, h4 {
 
 .booking-features li {
     padding: 8px 0;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-muted);
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
@@ -1584,7 +1584,7 @@ h1, h2, h3, h4 {
 
 .video-card-body h5 {
     font-family: var(--font-heading);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 8px;
@@ -1592,7 +1592,7 @@ h1, h2, h3, h4 {
 }
 
 .video-card-body p {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-muted);
     line-height: 1.6;
@@ -1625,13 +1625,13 @@ footer {
 
 .footer-title {
     font-family: var(--font-heading);
-    font-size: 28px;
+    font-size: 30px;
     color: var(--gold);
     margin-bottom: 8px;
 }
 
 .footer-tagline {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-muted);
     letter-spacing: 2px;
@@ -1654,7 +1654,7 @@ footer {
 
 .footer-col h4 {
     font-family: var(--font-heading);
-    font-size: 18px;
+    font-size: 20px;
     color: var(--gold);
     margin-bottom: 16px;
 }
@@ -1664,7 +1664,7 @@ footer {
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-secondary);
 }
@@ -1708,7 +1708,7 @@ footer {
 }
 
 .footer-bottom p {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-muted);
 }
