@@ -204,12 +204,21 @@ h1, h2, h3, h4 {
     font-size: 13px !important;
 }
 
+/* ─── Floating Buttons Container ─── */
+.floating-buttons {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: bottom 0.5s ease;
+}
+
 /* ─── Sound Toggle Button ─── */
 .sound-toggle {
-    position: fixed;
-    bottom: 104px;
-    right: 32px;
-    z-index: 9998;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -235,8 +244,8 @@ h1, h2, h3, h4 {
 }
 
 .sound-toggle svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
 }
 
 .sound-toggle .sound-toggle-off {
@@ -1873,19 +1882,19 @@ footer {
     }
 
     /* Floating buttons */
-    .floating-whatsapp {
-        width: 56px;
-        height: 56px;
-        font-size: 28px;
+    .floating-buttons {
         bottom: 24px;
         right: 20px;
     }
 
+    .floating-whatsapp,
     .sound-toggle {
-        bottom: 92px;
-        right: 20px;
         width: 56px;
         height: 56px;
+    }
+
+    .floating-whatsapp {
+        font-size: 28px;
     }
 }
 
@@ -2058,24 +2067,19 @@ footer {
         font-size: 16px;
     }
 
-    .floating-whatsapp {
-        width: 56px;
-        height: 56px;
-        font-size: 28px;
+    .floating-buttons {
         bottom: 20px;
         right: 16px;
     }
 
+    .floating-whatsapp,
     .sound-toggle {
-        bottom: 88px;
-        right: 16px;
         width: 56px;
         height: 56px;
     }
 
-    .sound-toggle svg {
-        width: 22px;
-        height: 22px;
+    .floating-whatsapp {
+        font-size: 28px;
     }
 
     .sound-banner {
@@ -2145,9 +2149,6 @@ footer {
 
 /* ─── Floating WhatsApp Button ─── */
 .floating-whatsapp {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
     width: 60px;
     height: 60px;
     background: #25D366;
@@ -2158,13 +2159,13 @@ footer {
     color: #fff;
     font-size: 30px;
     text-decoration: none;
-    z-index: 10000;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, bottom 0.5s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: whatsappPulse 2.5s ease-in-out infinite;
+    flex-shrink: 0;
 }
 
-.sound-banner.visible ~ .floating-whatsapp {
+.sound-banner.visible ~ .floating-buttons {
     bottom: 80px;
 }
 
