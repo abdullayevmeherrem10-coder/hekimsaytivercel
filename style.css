@@ -366,6 +366,13 @@ h1, h2, h3, h4 {
     height: 28px;
 }
 
+.brand-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
 .navbar-links ul {
     display: flex;
     list-style: none;
