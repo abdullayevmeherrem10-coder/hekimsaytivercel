@@ -1885,7 +1885,7 @@ footer {
         order: -1;
         margin-top: 0;
         flex-direction: column;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
     }
 
     .hero-image-wrapper {
@@ -1910,16 +1910,12 @@ footer {
         height: 320px;
     }
 
-    .hero-image-wrapper {
-        min-height: 270px;
-    }
-
     .hero-image-title {
         position: relative;
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 5px;
+        margin-top: 40px;
         font-size: 1rem;
         letter-spacing: 3px;
     }
@@ -1929,14 +1925,14 @@ footer {
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 5px;
+        margin-top: 25px;
         font-size: 1.8rem;
     }
 
     .hero-title {
         display: block;
-        margin-top: 5px;
-        font-size: 1.8rem;
+        margin-top: 25px;
+        font-size: 24px;
     }
 
     .hero-scroll-indicator {
@@ -2138,24 +2134,20 @@ footer {
         height: 38px;
     }
 
-    .hero-image-wrapper {
-        min-height: 220px;
-    }
-
     .hero-image-title {
-        margin-top: 5px;
-        font-size: 0.85rem;
+        margin-top: 35px;
+        font-size: 0.9rem;
         letter-spacing: 2.5px;
     }
 
     .hero-image-name {
-        margin-top: 5px;
-        font-size: 1.4rem;
+        margin-top: 20px;
+        font-size: 1.5rem;
     }
 
     .hero-title {
-        margin-top: 5px;
-        font-size: 1.4rem;
+        margin-top: 20px;
+        font-size: 20px;
     }
 
     /* Sections */
@@ -2320,19 +2312,19 @@ footer {
     }
 
     .hero-image-title {
-        margin-top: 4px;
-        font-size: 0.7rem;
+        margin-top: 30px;
+        font-size: 0.75rem;
         letter-spacing: 2px;
     }
 
     .hero-image-name {
-        margin-top: 4px;
-        font-size: 1.1rem;
+        margin-top: 16px;
+        font-size: 1.2rem;
     }
 
     .hero-title {
-        margin-top: 4px;
-        font-size: 1.1rem;
+        margin-top: 16px;
+        font-size: 18px;
     }
 
     .callback-card {
