@@ -780,7 +780,7 @@ h1, h2, h3, h4 {
 
 .hero-image-title {
     position: absolute;
-    bottom: -65px;
+    bottom: -80px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
@@ -796,7 +796,7 @@ h1, h2, h3, h4 {
 
 .hero-image-name {
     position: absolute;
-    bottom: -120px;
+    bottom: -140px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
