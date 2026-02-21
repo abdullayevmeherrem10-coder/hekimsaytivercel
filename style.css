@@ -513,9 +513,11 @@ h1, h2, h3, h4 {
     color: var(--text-secondary);
     font-weight: 500;
     margin-bottom: 40px;
-    max-width: 500px;
+    max-width: 560px;
     line-height: 1.8;
     text-align: justify;
+    word-spacing: -1px;
+    hyphens: auto;
 }
 
 /* Gold Outline Button */
