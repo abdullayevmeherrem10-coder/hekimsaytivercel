@@ -1221,9 +1221,10 @@ h1, h2, h3, h4 {
 .input-wrapper input {
     width: 100%;
     padding: 14px 16px 14px 48px;
-    background: rgba(10, 10, 26, 0.6);
-    border: 1px solid rgba(204, 164, 59, 0.15);
-    border-radius: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid rgba(204, 164, 59, 0.4);
+    border-radius: 0;
     color: var(--text-primary);
     font-family: var(--font-body);
     font-size: 16px;
@@ -1252,9 +1253,9 @@ h1, h2, h3, h4 {
 }
 
 .input-wrapper input:focus {
-    border-color: var(--gold);
-    background: rgba(10, 10, 26, 0.8);
-    box-shadow: 0 0 0 3px rgba(204, 164, 59, 0.1);
+    border-bottom-color: var(--gold);
+    background: transparent;
+    box-shadow: none;
 }
 
 .btn-callback {
