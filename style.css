@@ -2006,15 +2006,6 @@ footer {
         font-size: 13px;
     }
 
-    .phone-prefix {
-        font-size: 14px;
-        left: 40px;
-    }
-
-    .phone-prefix + input {
-        padding-left: 92px;
-    }
-
     .input-wrapper input {
         font-size: 14px;
         padding: 12px 14px 12px 40px;
@@ -2024,6 +2015,15 @@ footer {
         width: 18px;
         height: 18px;
         left: 14px;
+    }
+
+    .phone-prefix {
+        font-size: 14px;
+        left: 40px;
+    }
+
+    .phone-prefix + input {
+        padding-left: 92px !important;
     }
 
     .btn-callback {
