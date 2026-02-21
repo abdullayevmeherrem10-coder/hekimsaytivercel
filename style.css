@@ -1117,8 +1117,11 @@ h1, h2, h3, h4 {
 }
 
 .callback-content {
-    max-width: 560px;
+    max-width: var(--container-max);
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
 }
 
 .callback-card {
@@ -2042,7 +2045,9 @@ footer {
 
     /* Callback Form */
     .callback-content {
+        grid-template-columns: 1fr;
         max-width: 100%;
+        gap: 0;
     }
 
     .form-row {
