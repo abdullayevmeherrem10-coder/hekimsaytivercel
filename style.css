@@ -1944,19 +1944,19 @@ footer {
     }
 
     .hero-stats-mobile .hero-stat {
-        gap: 6px;
+        gap: 8px;
     }
 
     .hero-stats-mobile .hero-stat-number {
-        font-size: 18px;
+        font-size: 26px;
     }
 
     .hero-stats-mobile .hero-stat-label {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .hero-stats-mobile .hero-stat-icon {
-        font-size: 16px;
+        font-size: 22px;
     }
 
     .hero-stats {
@@ -2185,19 +2185,19 @@ footer {
     }
 
     .hero-stats-mobile {
-        gap: 16px;
+        gap: 12px;
     }
 
     .hero-stats-mobile .hero-stat-number {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .hero-stats-mobile .hero-stat-label {
-        font-size: 9px;
+        font-size: 11px;
     }
 
     .hero-stats-mobile .hero-stat-icon {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     /* Sections */
@@ -2378,19 +2378,19 @@ footer {
     }
 
     .hero-stats-mobile {
-        gap: 10px;
+        gap: 8px;
     }
 
     .hero-stats-mobile .hero-stat-number {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .hero-stats-mobile .hero-stat-label {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     .hero-stats-mobile .hero-stat-icon {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .callback-card {
