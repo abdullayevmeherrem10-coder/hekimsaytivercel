@@ -778,14 +778,30 @@ h1, h2, h3, h4 {
     to { transform: rotate(360deg); }
 }
 
+.hero-image-title {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 3px;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .hero-image-name {
     position: absolute;
-    bottom: -45px;
+    bottom: -90px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--gold);
     letter-spacing: 2px;
