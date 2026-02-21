@@ -849,6 +849,9 @@ h1, h2, h3, h4 {
     max-width: 600px;
     margin: 0 auto 20px;
     line-height: 1.8;
+    text-align: justify;
+    word-spacing: -1px;
+    hyphens: auto;
 }
 
 .section-divider {
@@ -1105,6 +1108,9 @@ h1, h2, h3, h4 {
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 32px;
+    text-align: justify;
+    word-spacing: -1px;
+    hyphens: auto;
 }
 
 .callback-form {
@@ -1499,6 +1505,9 @@ h1, h2, h3, h4 {
     color: var(--text-secondary);
     margin-bottom: 24px;
     line-height: 1.7;
+    text-align: justify;
+    word-spacing: -1px;
+    hyphens: auto;
 }
 
 .booking-features {
@@ -1599,6 +1608,9 @@ h1, h2, h3, h4 {
     font-weight: 500;
     color: var(--text-muted);
     line-height: 1.6;
+    text-align: justify;
+    word-spacing: -1px;
+    hyphens: auto;
 }
 
 /* ============================================================
