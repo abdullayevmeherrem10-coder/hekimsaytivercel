@@ -352,13 +352,13 @@ h1, h2, h3, h4 {
 .brand-title {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--gold) !important;
     text-decoration: none !important;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .brand-icon svg {
@@ -367,8 +367,8 @@ h1, h2, h3, h4 {
 }
 
 .brand-icon img {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
     border-radius: 50%;
 }
@@ -776,6 +776,21 @@ h1, h2, h3, h4 {
 
 @keyframes ringRotate {
     to { transform: rotate(360deg); }
+}
+
+.hero-image-name {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-align: center;
 }
 
 /* Scroll Indicator */
