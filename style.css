@@ -1799,6 +1799,17 @@ footer {
         height: 360px;
     }
 
+    .hero-image-title {
+        bottom: -60px;
+        font-size: 0.95rem;
+        letter-spacing: 3px;
+    }
+
+    .hero-image-name {
+        bottom: -110px;
+        font-size: 1.7rem;
+    }
+
     .tantra-content,
     .aura-content {
         gap: 40px;
@@ -1881,6 +1892,21 @@ footer {
     .hero-image-ring {
         width: 300px;
         height: 300px;
+    }
+
+    .hero-image-title {
+        bottom: -50px;
+        font-size: 0.85rem;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-image-name {
+        bottom: -90px;
+        font-size: 1.5rem;
+    }
+
+    .hero-section {
+        padding-bottom: 120px;
     }
 
     .hero-scroll-indicator {
@@ -2073,6 +2099,30 @@ footer {
         height: 235px;
     }
 
+    .brand-title {
+        font-size: 1.3rem;
+    }
+
+    .brand-icon img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .hero-image-title {
+        bottom: -42px;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-image-name {
+        bottom: -76px;
+        font-size: 1.25rem;
+    }
+
+    .hero-section {
+        padding-bottom: 100px;
+    }
+
     /* Sections */
     .section-title {
         font-size: 24px;
@@ -2222,6 +2272,27 @@ footer {
 
     .section-title {
         font-size: 22px;
+    }
+
+    .brand-title {
+        font-size: 1.1rem;
+        gap: 8px;
+    }
+
+    .brand-icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero-image-title {
+        bottom: -38px;
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-image-name {
+        bottom: -66px;
+        font-size: 1.1rem;
     }
 
     .callback-card {
