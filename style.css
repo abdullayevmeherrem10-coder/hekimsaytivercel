@@ -1248,7 +1248,27 @@ h1, h2, h3, h4 {
 }
 
 .input-wrapper input::placeholder {
-    color: var(--text-muted);
+    color: transparent;
+}
+
+.input-wrapper .input-line {
+    position: absolute;
+    left: 48px;
+    right: 16px;
+    top: 50%;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.input-wrapper input:focus ~ .input-line,
+.input-wrapper input:not(:placeholder-shown) ~ .input-line {
+    opacity: 0;
+}
+
+.input-wrapper .phone-prefix ~ .input-line {
+    left: 100px;
 }
 
 .input-wrapper input:focus {
