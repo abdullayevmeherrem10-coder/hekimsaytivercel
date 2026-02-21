@@ -1976,8 +1976,11 @@ footer {
     }
 
     .hero-subtitle {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.7;
+        text-align: justify;
+        word-spacing: -1px;
+        hyphens: auto;
     }
 
     .btn-hero {
