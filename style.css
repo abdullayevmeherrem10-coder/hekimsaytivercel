@@ -816,6 +816,10 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+.hero-stats-mobile {
+    display: none;
+}
+
 /* Scroll Indicator */
 .hero-scroll-indicator {
     position: absolute;
@@ -1928,6 +1932,18 @@ footer {
         transform: none;
         margin-top: 5px;
         font-size: 1.8rem;
+    }
+
+    .hero-stats-mobile {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .hero-stats {
+        display: none;
     }
 
     .hero-title {
