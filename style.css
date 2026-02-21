@@ -1910,12 +1910,16 @@ footer {
         height: 320px;
     }
 
+    .hero-image-wrapper {
+        min-height: 320px;
+    }
+
     .hero-image-title {
         position: relative;
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 40px;
+        margin-top: 25px;
         font-size: 1rem;
         letter-spacing: 3px;
     }
@@ -1925,14 +1929,14 @@ footer {
         bottom: auto;
         left: auto;
         transform: none;
-        margin-top: 25px;
+        margin-top: 15px;
         font-size: 1.8rem;
     }
 
     .hero-title {
         display: block;
-        margin-top: 25px;
-        font-size: 24px;
+        margin-top: 12px;
+        font-size: 1.8rem;
     }
 
     .hero-scroll-indicator {
@@ -2134,20 +2138,24 @@ footer {
         height: 38px;
     }
 
+    .hero-image-wrapper {
+        min-height: 260px;
+    }
+
     .hero-image-title {
-        margin-top: 35px;
-        font-size: 0.9rem;
+        margin-top: 20px;
+        font-size: 0.85rem;
         letter-spacing: 2.5px;
     }
 
     .hero-image-name {
-        margin-top: 20px;
-        font-size: 1.5rem;
+        margin-top: 12px;
+        font-size: 1.4rem;
     }
 
     .hero-title {
-        margin-top: 20px;
-        font-size: 20px;
+        margin-top: 10px;
+        font-size: 1.4rem;
     }
 
     /* Sections */
@@ -2312,19 +2320,19 @@ footer {
     }
 
     .hero-image-title {
-        margin-top: 30px;
-        font-size: 0.75rem;
+        margin-top: 18px;
+        font-size: 0.7rem;
         letter-spacing: 2px;
     }
 
     .hero-image-name {
-        margin-top: 16px;
-        font-size: 1.2rem;
+        margin-top: 10px;
+        font-size: 1.1rem;
     }
 
     .hero-title {
-        margin-top: 16px;
-        font-size: 18px;
+        margin-top: 8px;
+        font-size: 1.1rem;
     }
 
     .callback-card {
