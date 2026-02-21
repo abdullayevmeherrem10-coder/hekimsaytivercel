@@ -1,0 +1,72 @@
+// Dəyişənlər
+$footer-bg: #0d0101
+$text-color: #fffefe
+$hover-color: #ffc107
+
+footer
+    padding-top: 40px
+    padding-bottom: 20px
+    background-color: $footer-bg
+    color: $text-color
+
+    .box
+        width: 100%
+        h2
+            color: $text-color
+            font-weight: 700
+            margin-bottom: 20px
+            font-size: 26px
+
+            @media (max-width: 768px)
+                font-size: 22px
+                margin-bottom: 15px
+        .box-two
+            h3
+                color: darken($text-color, 10%)
+                margin-bottom: 8px
+                font-weight: 500
+                font-size: 18px
+
+                @media (max-width: 768px)
+                    font-size: 16px
+            h4
+                margin-bottom: 20px
+                font-size: 16px
+
+                @media (max-width: 768px)
+                    font-size: 15px
+                    margin-bottom: 15px
+                a
+                    color: $text-color
+                    text-decoration: none
+                    transition: color 0.3s ease
+                    &:hover
+                        color: $hover-color
+    .social-icons
+        a
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 40px
+            height: 40px
+            background-color: rgba(255, 255, 255, 0.1)
+            border-radius: 50%
+            color: $text-color
+            text-decoration: none
+            font-size: 18px
+            transition: all 0.3s ease
+            &:hover
+                background-color: $text-color
+                color: $footer-bg
+                transform: translateY(-3px)
+    .footer-bottom
+        border-top: 1px solid rgba(255, 255, 255, 0.1)
+        margin-top: 30px
+        padding-top: 20px
+        p
+            font-size: 16px
+            color: rgba($text-color, 0.7)
+            margin: 0
+
+            @media (max-width: 576px)
+                font-size: 14px

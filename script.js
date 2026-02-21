@@ -1,0 +1,256 @@
+/* ============================================================
+   PREMIUM MYSTICAL WEBSITE - JavaScript
+   Parapsixoloq Şahsəddin İmanlı
+   ============================================================ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 80,
+        easing: 'ease-out-cubic'
+    });
+
+    // ─── Mobile Menu Toggle ───
+    const toggleButton = document.getElementById('mobile-menu-btn');
+    const navbarLinks = document.getElementById('navbar-links-container');
+
+    if (toggleButton && navbarLinks) {
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+            toggleButton.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navbarLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarLinks.classList.remove('active');
+                toggleButton.classList.remove('active');
+            });
+        });
+    }
+
+    // ─── Header Scroll Effect ───
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // ─── Hero Particles ───
+    const particleContainer = document.getElementById('hero-particles');
+    if (particleContainer) {
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = (40 + Math.random() * 50) + '%';
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            particle.style.animationDuration = (5 + Math.random() * 6) + 's';
+
+            const size = 2 + Math.random() * 3;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+
+            // Random color between gold, amber, and purple
+            const colors = [
+                'rgba(204, 164, 59, 0.6)',
+                'rgba(217, 119, 6, 0.5)',
+                'rgba(168, 85, 247, 0.4)',
+                'rgba(45, 212, 191, 0.3)'
+            ];
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+            particleContainer.appendChild(particle);
+        }
+    }
+
+    // ─── Smooth Scroll for Anchor Links ───
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                const headerOffset = 70;
+                const elementPosition = targetEl.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ─── Ambient Music (MP3) ───
+    const soundBanner = document.getElementById('sound-banner');
+    const enableSoundBtn = document.getElementById('enable-sound');
+    const disableSoundBtn = document.getElementById('disable-sound');
+    const soundToggle = document.getElementById('sound-toggle');
+    const ambientAudio = new Audio('assets/music.mp3');
+    ambientAudio.loop = true;
+    ambientAudio.volume = 0.3;
+    let soundEnabled = false;
+    let soundMuted = false;
+
+    // Show sound banner after short delay
+    setTimeout(() => {
+        if (soundBanner) {
+            soundBanner.classList.add('visible');
+        }
+    }, 3000);
+
+    if (enableSoundBtn) {
+        enableSoundBtn.addEventListener('click', () => {
+            ambientAudio.play();
+            soundEnabled = true;
+            soundBanner.classList.remove('visible');
+            if (soundToggle) {
+                soundToggle.classList.add('visible');
+            }
+        });
+    }
+
+    if (disableSoundBtn) {
+        disableSoundBtn.addEventListener('click', () => {
+            soundBanner.classList.remove('visible');
+        });
+    }
+
+    // Sound toggle (mute/unmute)
+    if (soundToggle) {
+        soundToggle.addEventListener('click', () => {
+            if (!soundEnabled) return;
+
+            if (soundMuted) {
+                ambientAudio.play();
+                soundToggle.classList.remove('muted');
+                soundToggle.setAttribute('aria-label', 'Səsi dayandır');
+                soundMuted = false;
+            } else {
+                ambientAudio.pause();
+                soundToggle.classList.add('muted');
+                soundToggle.setAttribute('aria-label', 'Səsi açmaq');
+                soundMuted = true;
+            }
+        });
+    }
+
+    // ─── Callback Form Submission to Google Sheets ───
+    const callbackForm = document.getElementById('callback-form');
+    if (callbackForm) {
+        callbackForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const firstnameInput = document.getElementById('client-firstname');
+            const lastnameInput = document.getElementById('client-lastname');
+            const phoneInput = document.getElementById('client-phone');
+            const submitBtn = document.getElementById('callback-submit');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            const successMsg = document.getElementById('callback-success');
+            const errorMsg = document.getElementById('callback-error');
+
+            // Hide previous messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+            submitBtn.disabled = true;
+
+            // GOOGLE SHEETS WEB APP URL - bu URL-i öz Google Apps Script deployment URL-iniz ilə əvəz edin
+            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHct03_Veefazh2x46WrdyRmB8E6IV2JhjDeV2zCXvzyCcZJZGzXQzT4f9mRnsSOSJ3A/exec';
+
+            try {
+                const params = new URLSearchParams({
+                    ad: firstnameInput.value.trim(),
+                    soyad: lastnameInput.value.trim(),
+                    telefon: '+994' + phoneInput.value.trim().replace(/\D/g, ''),
+                    tarix: new Date().toLocaleString('az-AZ')
+                });
+                const response = await fetch(GOOGLE_SCRIPT_URL + '?' + params.toString(), {
+                    method: 'GET',
+                    mode: 'no-cors'
+                });
+
+                // no-cors mode always returns opaque response, so we assume success
+                callbackForm.style.display = 'none';
+                successMsg.style.display = 'flex';
+                firstnameInput.value = '';
+                lastnameInput.value = '';
+                phoneInput.value = '';
+            } catch (err) {
+                errorMsg.style.display = 'flex';
+            } finally {
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
+    // ─── Aurora Background Color Shift on Scroll ───
+    const auroraBg = document.getElementById('aurora-bg');
+
+    function updateAuroraOnScroll() {
+        const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+
+        if (auroraBg) {
+            // Shift from purple (top) to warm amber/orange (middle/tantra) to mint (bottom/aura)
+            const purpleIntensity = Math.max(0.05, 0.15 - scrollPercent * 0.2);
+            const amberIntensity = Math.max(0, Math.min(0.12, scrollPercent * 0.3 - 0.02));
+            const mintIntensity = Math.max(0, Math.min(0.1, scrollPercent * 0.25 - 0.08));
+
+            auroraBg.style.background = `
+                radial-gradient(ellipse at 20% 50%, rgba(30, 27, 75, 0.8) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, ${purpleIntensity}) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(45, 212, 191, ${mintIntensity}) 0%, transparent 50%),
+                radial-gradient(ellipse at 10% 90%, rgba(217, 119, 6, ${amberIntensity}) 0%, transparent 40%),
+                #0a0a1a
+            `;
+        }
+    }
+
+    window.addEventListener('scroll', updateAuroraOnScroll);
+
+    // ─── Active Navigation Link Highlight ───
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-links a');
+
+    function highlightNavLink() {
+        const scrollPos = window.pageYOffset + 100;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.style.color = '';
+                    if (link.getAttribute('href') === '#' + sectionId) {
+                        link.style.color = '#cca43b';
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', highlightNavLink);
+});

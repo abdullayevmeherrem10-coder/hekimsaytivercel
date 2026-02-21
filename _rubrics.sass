@@ -1,0 +1,95 @@
+#rubrics
+    $section-bg: #f8f9fa
+    $card-bg: #ffffff
+    $card-border-color: #dee2e6
+    $card-shadow: 0 4px 15px rgba(0, 0, 0, 0.07)
+    $card-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.12)
+    $primary-accent: #0d6efd
+    $text-color-dark: #212529
+    $text-color-light: #6c757d
+    $border-radius: 0.75rem
+    $transition-speed: 0.3s
+    &.video-section
+        .section-header
+            background-color: $section-bg
+            h2
+                font-size: 40px
+                font-weight: 700
+                margin-bottom: 15px
+                color: $text-color-dark
+            .text-muted
+                font-size: 17px
+                font-weight: 400
+
+    .video-card
+        background-color: $card-bg
+        border: 1px solid $card-border-color
+        border-radius: $border-radius
+        box-shadow: $card-shadow
+        overflow: hidden
+        transition: transform $transition-speed ease, box-shadow $transition-speed ease
+        &:hover
+            transform: translateY(-8px)
+            box-shadow: $card-shadow-hover
+            .play-button
+                opacity: 1
+                transform: translate(-50%, -50%) scale(1)
+            .video-thumbnail::before
+                opacity: 1
+        .video-thumbnail
+            position: relative
+            cursor: pointer
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: rgba(0, 0, 0, 0.4)
+                opacity: 0
+                transition: opacity $transition-speed ease
+        .play-button
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) scale(0.8)
+            color: white
+            opacity: 0
+            transition: opacity $transition-speed ease, transform $transition-speed ease
+            z-index: 10
+        .video-card-body
+            padding: 1.25rem
+
+        .video-card-title
+            font-size: 1.1rem
+            font-weight: 600
+            color: $text-color-dark
+            margin-bottom: 0.5rem
+
+        .video-card-text
+            font-size: 0.9rem
+            color: $text-color-light
+            line-height: 1.5
+        .ratio
+            border-top-left-radius: $border-radius
+            border-top-right-radius: $border-radius
+
+    @media (max-width: 576px)
+        .section-header
+            text-align: center 
+            h2
+                font-size: 14px
+            p 
+                font-size: 10px
+                width: 90%
+
+    @media (max-width: 768px)
+        .section-header
+            h2
+                font-size: 2.2rem
+                margin-bottom: 1.2rem
+            p
+                font-size: 1.1rem
+                line-height: 1.7
+                width: 100%
