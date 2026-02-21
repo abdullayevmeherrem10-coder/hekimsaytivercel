@@ -1937,9 +1937,26 @@ footer {
     .hero-stats-mobile {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
+        flex-wrap: nowrap;
+        gap: 24px;
         margin-top: 10px;
+        width: 100%;
+    }
+
+    .hero-stats-mobile .hero-stat {
+        gap: 6px;
+    }
+
+    .hero-stats-mobile .hero-stat-number {
+        font-size: 18px;
+    }
+
+    .hero-stats-mobile .hero-stat-label {
+        font-size: 10px;
+    }
+
+    .hero-stats-mobile .hero-stat-icon {
+        font-size: 16px;
     }
 
     .hero-stats {
@@ -2163,8 +2180,24 @@ footer {
     }
 
     .hero-title {
-        margin-top: 20px;
-        font-size: 20px;
+        margin-top: -2px;
+        font-size: 1.5rem;
+    }
+
+    .hero-stats-mobile {
+        gap: 16px;
+    }
+
+    .hero-stats-mobile .hero-stat-number {
+        font-size: 15px;
+    }
+
+    .hero-stats-mobile .hero-stat-label {
+        font-size: 9px;
+    }
+
+    .hero-stats-mobile .hero-stat-icon {
+        font-size: 14px;
     }
 
     /* Sections */
@@ -2340,8 +2373,24 @@ footer {
     }
 
     .hero-title {
-        margin-top: 16px;
-        font-size: 18px;
+        margin-top: -2px;
+        font-size: 1.2rem;
+    }
+
+    .hero-stats-mobile {
+        gap: 10px;
+    }
+
+    .hero-stats-mobile .hero-stat-number {
+        font-size: 13px;
+    }
+
+    .hero-stats-mobile .hero-stat-label {
+        font-size: 8px;
+    }
+
+    .hero-stats-mobile .hero-stat-icon {
+        font-size: 12px;
     }
 
     .callback-card {
