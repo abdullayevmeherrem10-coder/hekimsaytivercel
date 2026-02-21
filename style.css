@@ -701,7 +701,6 @@ h1, h2, h3, h4 {
 .hero-image {
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -140px;
@@ -780,9 +779,11 @@ h1, h2, h3, h4 {
 }
 
 .hero-image-title {
-    position: relative;
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 5;
-    margin-top: 30px;
     font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 400;
@@ -794,9 +795,11 @@ h1, h2, h3, h4 {
 }
 
 .hero-image-name {
-    position: relative;
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 5;
-    margin-top: 20px;
     font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 600;
@@ -1797,13 +1800,13 @@ footer {
     }
 
     .hero-image-title {
-        margin-top: 25px;
+        bottom: -70px;
         font-size: 0.95rem;
         letter-spacing: 3px;
     }
 
     .hero-image-name {
-        margin-top: 18px;
+        bottom: -120px;
         font-size: 1.7rem;
     }
 
@@ -1874,6 +1877,27 @@ footer {
     .hero-image {
         order: -1;
         margin-top: 0;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .hero-image-title {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 22px;
+        font-size: 0.85rem;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-image-name {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 16px;
+        font-size: 1.5rem;
     }
 
     .hero-image img {
@@ -1889,17 +1913,6 @@ footer {
     .hero-image-ring {
         width: 300px;
         height: 300px;
-    }
-
-    .hero-image-title {
-        margin-top: 22px;
-        font-size: 0.85rem;
-        letter-spacing: 2.5px;
-    }
-
-    .hero-image-name {
-        margin-top: 16px;
-        font-size: 1.5rem;
     }
 
     .hero-scroll-indicator {
