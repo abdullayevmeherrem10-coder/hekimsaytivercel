@@ -1002,7 +1002,7 @@ h1, h2, h3, h4 {
 }
 
 .callback-content {
-    max-width: 560px;
+    max-width: 420px;
     margin: 0 auto;
 }
 
@@ -1010,8 +1010,8 @@ h1, h2, h3, h4 {
     position: relative;
     background: rgba(15, 23, 42, 0.6);
     border: 1px solid rgba(204, 164, 59, 0.15);
-    border-radius: 24px;
-    padding: 48px 40px;
+    border-radius: 20px;
+    padding: 36px 28px 24px;
     text-align: center;
     overflow: hidden;
     backdrop-filter: blur(10px);
@@ -1027,58 +1027,23 @@ h1, h2, h3, h4 {
     pointer-events: none;
 }
 
-.callback-icon {
-    margin-bottom: 20px;
-}
-
-.callback-icon svg {
-    width: 56px;
-    height: 56px;
-}
-
-.callback-card h3 {
-    font-family: var(--font-heading);
-    font-size: 26px;
-    font-weight: 600;
+.callback-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
     color: var(--gold-light);
-    margin-bottom: 12px;
-}
-
-.callback-description {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
 }
 
 .callback-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.form-row {
-    display: flex;
-    gap: 16px;
-}
-
-.form-group-half {
-    flex: 1;
+    gap: 12px;
 }
 
 .form-group {
     text-align: left;
-}
-
-.form-group label {
-    display: block;
-    font-family: var(--font-body);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
 }
 
 .input-wrapper {
@@ -1089,56 +1054,90 @@ h1, h2, h3, h4 {
 
 .input-icon {
     position: absolute;
-    left: 16px;
-    width: 20px;
-    height: 20px;
+    left: 14px;
+    width: 18px;
+    height: 18px;
     pointer-events: none;
     opacity: 0.7;
 }
 
 .input-wrapper input {
     width: 100%;
-    padding: 14px 16px 14px 48px;
-    background: rgba(10, 10, 26, 0.6);
-    border: 1px solid rgba(204, 164, 59, 0.15);
-    border-radius: 12px;
+    padding: 13px 16px 13px 44px;
+    background: transparent;
+    border: 1px solid rgba(204, 164, 59, 0.25);
+    border-radius: 10px;
     color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
     outline: none;
     transition: all 0.3s ease;
 }
 
 .phone-prefix {
     position: absolute;
-    left: 48px;
-    color: var(--text-primary);
+    left: 44px;
+    color: var(--text-secondary);
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
     pointer-events: none;
     z-index: 1;
 }
 
 .phone-prefix + input {
-    padding-left: 100px;
+    padding-left: 90px;
 }
 
 .input-wrapper input::placeholder {
     color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 
 .input-wrapper input:focus {
     border-color: var(--gold);
-    background: rgba(10, 10, 26, 0.8);
+    background: rgba(10, 10, 26, 0.4);
     box-shadow: 0 0 0 3px rgba(204, 164, 59, 0.1);
 }
 
 .btn-callback {
     width: 100%;
     justify-content: center;
-    margin-top: 8px;
-    padding: 16px 40px;
-    font-size: 16px;
+    margin-top: 4px;
+    padding: 14px 40px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.callback-footer-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 16px;
+}
+
+.callback-legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.callback-legal-links a {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.callback-legal-links a:hover {
+    color: var(--gold);
 }
 
 .btn-callback .spinner {
@@ -1833,11 +1832,6 @@ footer {
         max-width: 100%;
     }
 
-    .form-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     /* Booking */
     .booking-cards {
         grid-template-columns: 1fr;
@@ -1992,44 +1986,17 @@ footer {
 
     /* Callback */
     .callback-card {
-        padding: 28px 16px;
-        border-radius: 18px;
+        padding: 28px 16px 20px;
+        border-radius: 16px;
     }
 
-    .callback-card h3 {
+    .callback-title {
         font-size: 20px;
     }
 
-    .callback-description {
-        font-size: 13px;
-    }
-
-    .phone-prefix {
-        font-size: 14px;
-    }
-
-    .phone-prefix + input {
-        padding-left: 90px;
-    }
-
-    .input-wrapper input {
-        font-size: 14px;
-        padding: 12px 14px 12px 44px;
-    }
-
-    .input-icon {
-        width: 18px;
-        height: 18px;
-        left: 14px;
-    }
-
-    .phone-prefix {
-        left: 44px;
-    }
-
     .btn-callback {
-        padding: 14px 24px;
-        font-size: 15px;
+        padding: 13px 24px;
+        font-size: 14px;
     }
 
     /* Booking */
@@ -2116,7 +2083,7 @@ footer {
     }
 
     .callback-card {
-        padding: 24px 14px;
+        padding: 24px 14px 18px;
     }
 
     .btn-gold-outline,
